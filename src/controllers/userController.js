@@ -1,18 +1,10 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const app = express();
-const port = 3000;
-const users = require("./data");
+const users = require("../models/userModel");
 
-app.use(bodyParser.json());
-app.use(cors());
-
-app.get("/users", (req, res) => {
+exports.getAllUsers = (req, res) => {
   res.json(users);
-});
+};
 
-app.get("/users/:id", (req, res) => {
+exports.getUserById = (req, res) => {
   const userId = parseInt(req.params.id, 10);
   const user = users.find((u) => u.id === userId);
 
@@ -21,9 +13,9 @@ app.get("/users/:id", (req, res) => {
   } else {
     res.status(404).json({ message: "User not found" });
   }
-});
+};
 
-app.post("/users/:id/update", (req, res) => {
+exports.updateUser = (req, res) => {
   const userId = parseInt(req.params.id, 10);
   const { status, assignedName, assignedAvatar } = req.body;
 
@@ -37,9 +29,9 @@ app.post("/users/:id/update", (req, res) => {
   } else {
     res.status(404).json({ message: "User not found" });
   }
-});
+};
 
-app.post("/users/:id/message", (req, res) => {
+exports.addMessage = (req, res) => {
   const userId = parseInt(req.params.id, 10);
   const { message } = req.body;
 
@@ -55,8 +47,4 @@ app.post("/users/:id/message", (req, res) => {
   } else {
     res.status(404).json({ message: "User not found" });
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+};

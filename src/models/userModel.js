@@ -1,4 +1,4 @@
-const users = [
+module.exports = [
   {
     id: 1,
     proccess_type: "1ª Instancia",
@@ -149,5 +149,3 @@ const users = [
     history_comments: [],
   },
 ];
-
-module.exports = users;
