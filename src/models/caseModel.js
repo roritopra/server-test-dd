@@ -9,6 +9,7 @@ module.exports = [
     name: "Ricardo Bermudez",
     email: "vaness_s@gmail.com",
     phone: "34604789",
+    procedure_type: "Derecho Civil",
     response_time: "72",
     register_number: "INV4257-09-011",
     assigned: {
@@ -33,6 +34,7 @@ module.exports = [
     name: "Ricardo Bermudez",
     email: "vaness_s@gmail.com",
     phone: "34604789",
+    procedure_type: "Derecho Laboral",
     response_time: "72",
     register_number: "INV4257-09-011",
     assigned: {
@@ -57,6 +59,7 @@ module.exports = [
     name: "Ricardo Bermudez",
     email: "vaness_s@gmail.com",
     phone: "34604789",
+    procedure_type: "Derecho de Familia",
     response_time: "72",
     register_number: "INV4257-09-011",
     assigned: {
@@ -81,6 +84,7 @@ module.exports = [
     name: "Ricardo Bermudez",
     email: "vaness_s@gmail.com",
     phone: "34604789",
+    procedure_type: "Derecho Penal",
     response_time: "72",
     register_number: "INV4257-09-011",
     assigned: {
@@ -105,6 +109,7 @@ module.exports = [
     name: "Ricardo Bermudez",
     email: "vaness_s@gmail.com",
     phone: "34604789",
+    procedure_type: "Derecho Penal",
     response_time: "72",
     register_number: "INV4257-09-011",
     assigned: {
@@ -134,6 +139,7 @@ module.exports = [
     name: "Ricardo Bermudez",
     email: "vaness_s@gmail.com",
     phone: "34604789",
+    procedure_type: "Derecho Laboral",
     response_time: "72",
     register_number: "INV4257-09-011",
     assigned: {
