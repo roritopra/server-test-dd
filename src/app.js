@@ -1,13 +1,18 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
-const userRoutes = require("./routes/userRoutes");
+const bodyParser = require("body-parser");
 const reviewerRoutes = require("./routes/reviewerRoutes");
+const caseRoutes = require("./routes/caseRoutes");
+
 const app = express();
 
-app.use(bodyParser.json());
+// Middleware
 app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/users", userRoutes);
+// Routes
 app.use("/reviewers", reviewerRoutes);
+app.use("/cases", caseRoutes);
+
 module.exports = app;
